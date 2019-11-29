@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>iBrochure 11</title>
+    <link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="resources/index.css" />
+    <script src="resources/jquery(v3.3.1).min.js"></script>
+    <script src="resources/popper(v1.3.1).min.js"></script>
+    <script src="resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="resources/index.js"></script>
+</head>
+<body>
+    <div class="container-fluid bg-light p-0 m-0">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><b>iBrochure 11</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <span class="w-75"></span>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a data-target="#carouselPrimary" data-slide-to="0" class="nav-link" href="#"><b>Home</b></a>
+                    </li>
+                    <li data-target="#carouselPrimary" data-slide-to="2" class="nav-item">
+                        <a class="nav-link" href="#"><b>Menu</b></a>
+                    </li>
+                    <li data-target="#carouselPrimary">
+                        <a class="nav-link" href="https://sites.google.com/view/ibrochure11/home"><b>Full Site</b></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid p-0 m-0 w-100 NavPage">
+            <div id="carouselPrimary" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container-fluid justify-content-xl-center p-0 m-0 w-100">
+                            <img src="resources/imgs/bg2.jpg" class="position-fixed img-fluid w-100 infoBG" alt="Responsive image">
+                            <div class="introPagePadding">
+                                <div class="container shadow-lg p-3 mb-5 border border-info rounded introPage">
+                                    <h1 class="font-weight-bolder display-4">Environmental<br />Awareness:</h1>
+                                    <hr />
+                                    <h4 class="font-weight-bold display-8">Marine environments are being destroyed!</h4>
+                                    <p class="lead font-weight-bold">Our everyday activitied harm these environments. Take action <b>today</b> to preserve the life of marine animals.</p>
+                                    <br />
+                                    <div class="container d-flex">
+                                        <span class="w-75"></span>
+                                        <form class="form ml-5 bg-light rounded">
+                                            <button class="btn btn-outline-primary" onclick="GotoCarosel(1);" data-target="#carouselPrimary" data-slide-to="1">Learn More</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container-fluid justify-content-xl-center p-0 m-0 w-100">
+                            <img src="resources/imgs/bg3.jpg" class="position-fixed img-fluid w-100 infoBG" alt="Responsive image">
+                            <div class="introPagePadding">
+                                <div class="container shadow-lg p-3 mb-5 border border-info rounded introPage">
+                                    <h1 class="font-weight-bolder display-4">The Impact of<br />Climate Change:</h1>
+                                    <hr />
+                                    <h4 class="display-8">The rise in ocean temperature and increased acidity makes it more difficult for marine organisms such as shrimps, oysters, or corals to form their shells – a process known as <b>calcification</b>.</h4>
+                                    <br />
+                                    <div class="container d-flex">
+                                        <span class="w-75"></span>
+                                        <form class="form ml-5">
+                                            <button class="btn btn-outline-primary bg-light" onclick="GotoCarosel(2);" data-target="#carouselPrimary" data-slide-to="2">Continue</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container-fluid m-0 p-0 NavSpaceHolder">
+                            <div class="container-fluid m-0 p-0 zoom">
+                                <img src="resources/imgs/mainbg.jpg" class="position-fixed img-fluid w-100" />
+                                <div class="iconLabel labelA" data-target="#carouselPrimary" data-slide-to="3" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                    <img src="resources/imgs/circle.png" class="position-fixed img-fluid" />
+                                    <img src="resources/imgs/letA.png" class="position-fixed img-fluid" />
+                                </div>
+                                <div class="iconLabel labelB" data-target="#carouselPrimary" data-slide-to="4">
+                                    <img src="resources/imgs/circle.png" class="position-fixed img-fluid" />
+                                    <img src="resources/imgs/letB.png" class="position-fixed img-fluid letB" />
+                                </div>
+                                <div class="iconLabel labelC" data-target="#carouselPrimary" data-slide-to="5">
+                                    <img src="resources/imgs/circle.png" class="position-fixed img-fluid" />
+                                    <img src="resources/imgs/letC.png" class="position-fixed img-fluid" />
+                                </div>
+                                <div class="instrLabel">
+                                    <h4 class="display-8">Click an icon to continue...</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container-fluid justify-content-xl-center p-0 m-0 w-100">
+                            <img src="resources/imgs/bg0.jpg" class="position-fixed img-fluid w-100 infoBG" alt="Responsive image">
+                            <div class="introPagePadding">
+                                <div class="container shadow-lg p-3 mb-5 border border-info rounded introPage">
+                                    <h1 class="font-weight-bolder display-4">Global Warming<br/>vs.<br/>Climate Change</h1>
+                                    <hr />
+                                    <h4 class="font-weight-bold display-8">There is a difference but similar results!</h4>
+                                    <p class="lead display-8">Climate Change is a long-term change in the average weather patterns that have come to define Earth’s local, regional and global climates. Whilst, Global Warming is the long-term heating of the Earth’s climate system due to human activities, primarily fossil fuel burning, which increases heat trapping greenhouse gas levels. The rise in atmospheric temperat</p>
+                                    <br />
+                                    <p class="lead display-8"><b>Results:</b> Melting Ice Caps</p>
+                                    <div class="container d-flex">
+                                        <span class="w-75"></span>
+                                        <form class="form ml-5">
+                                            <a class="btn btn-primary" href="comp2.html" role="button">See Comparisons</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container-fluid justify-content-xl-center p-0 m-0 w-100">
+                            <img src="resources/imgs/bg0.jpg" class="position-fixed img-fluid w-100 infoBG" alt="Responsive image">
+                            <div class="introPagePadding">
+                                <div class="container shadow-lg p-3 mb-5 border border-info rounded introPage">
+                                    <h1 class="font-weight-bolder display-4">Rising<br />Waters:</h1>
+                                    <hr />
+                                    <h4 class="font-weight-bold display-8">More Water More Problems!</h4>
+                                    <p class="lead display-8">Higher temperatures are linked to almost all of climate change and global warming’s most severe impacts, including more frequent and intense heat waves, widespread crop failures, and dramatic shifts in animal and plant ranges.</p>
+                                    <p class="lead display-8">Results: Receding shore lines</p>
+                                    <br />
+                                    <div class="container d-flex">
+                                        <span class="w-75"></span>
+                                        <form class="form ml-5">
+                                            <a class="btn btn-primary" href="comp1.html" role="button">See Comparisons</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container-fluid justify-content-xl-center p-0 m-0 w-100">
+                            <img src="resources/imgs/bg0.jpg" class="position-fixed img-fluid w-100 infoBG" alt="Responsive image">
+                            <div class="introPagePadding">
+                                <div class="container shadow-lg p-3 mb-5 border border-info rounded introPage">
+                                    <h1 class="font-weight-bolder display-4">Natural<br />Disasters:</h1>
+                                    <hr />
+                                    <h4 class="font-weight-bold display-7">They are getting stronger!</h4>
+                                    <p class="lead display-8">Warm water is important because it acts as a fuel for hurricanes. Water has to be at least 26 degrees Celsius for a storm to form. The warmer the water, the more a hurricane can resist forces that would cause it to weaken. The Atlantic is predicted to warm faster than the rest of the world's oceans.</p>
+                                    <p class="lead display-8">Results: Stronger Hurricanes lead to more environmental damage.</p>
+                                    <br />
+                                    <div class="container d-flex">
+                                        <span class="w-75"></span>
+                                        <form class="form ml-5">
+                                            <a class="btn btn-primary" href="comp3.html" role="button">See Comparisons</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

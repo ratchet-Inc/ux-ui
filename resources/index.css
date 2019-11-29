@@ -1,0 +1,125 @@
+﻿body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.NavPage {
+    min-height: 80vh;
+}
+
+.infoBG {
+    z-index: -1;
+}
+
+.introPagePadding {
+    padding-top: 15vh;
+}
+
+.introPage {
+    min-height: 40vh;
+    background-color: rgba(120, 120, 120, 0.75);
+}
+
+    .introPage h1 {
+        font-family: Helvetica;
+    }
+
+    .introPage form {
+        margin-top: 10vh;
+    }
+
+.NavSpaceHolder {
+    min-height: 95vh;
+    width: 100vw;
+}
+
+.zoom {
+    transition: transform .5s; /* Animation */
+    transform: scale(1.5);
+}
+
+.iconLabel {
+    position: absolute;
+}
+
+.instrLabel {
+    position: absolute;
+    margin-top: 85vh;
+    margin-left: 40vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 4px;
+}
+
+    .instrLabel h4 {
+        color: white;
+    }
+
+.labelA{
+    margin-top: 10vh;
+    margin-left: 7.5vw;
+}
+
+.labelB {
+    margin-top: 60vh;
+    margin-left: 25vw;
+}
+
+.labelC {
+    margin-top: 25vh;
+    margin-left: 60vw;
+}
+
+.labelD {
+    margin-top: 80vh;
+    margin-left: 72.5vw;
+}
+
+.letB {
+    padding-top: 1vh;
+    padding-left: 1vh;
+    width: 56px;
+}
+
+.letD {
+    padding-top: 1vh;
+    padding-left: 1vh;
+    width: 56px;
+}
+
+.imgsliderstyle{
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.img-comp-container {
+    position: relative;
+    height: 200px; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+    .img-comp-img img {
+        display: block;
+        vertical-align: middle;
+    }
+
+.img-comp-slider {
+    position: absolute;
+    z-index: 9;
+    cursor: ew-resize;
+    /*set the appearance of the slider:*/
+    width: 40px;
+    height: 40px;
+    background-color: #2196F3;
+    opacity: 0.7;
+    border-radius: 50%;
+}
