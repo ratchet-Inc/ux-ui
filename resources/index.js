@@ -6,7 +6,7 @@ var NavLinks = null;
 var ZoomInterval = null;
 var quizEval = false;
 var quizReady = false;
-var visited = { v1: false, v2: false, v3: false };
+var visited = { v1: false, v2: false, v3: false, v4: false };
 
 function initComparisons() {
     var x, i;
@@ -126,16 +126,13 @@ function CarouselCallback(){
         }
     }
     console.log("found: " + curView);
-    switch (curView) {
-        case 2:
-            $(".zoom").attr('style', 'transform: scale(1.0)');
-            break;
-    }
+    $(".list-group-item").removeClass("active");
+    document.getElementsByClassName("pages")[curView].classList.add("active");
 }
 
 function InstrTextLoop() {
     $('#instrText')
-        .animate({ top: 25 }, 1500)
+        .animate({ top: 20 }, 1500)
         .animate({ top: 10 }, 1500, InstrTextLoop);
 }
 
@@ -156,6 +153,9 @@ function GotoCarosel(index, prev = -1) {
     }
     if (visited.v3 === true) {
         $(".labelCIcon").addClass("iconLabelFade");
+    }
+    if (visited.v4 === true) {
+        $(".labelDIcon").addClass("iconLabelFade");
     }
     switch (index) {
         case 0:
@@ -180,7 +180,7 @@ function GotoCarosel(index, prev = -1) {
             if (prev === -1) {
                 $(".NavPage").addClass("hideView");
             }
-            if (visited.v1 === true & visited.v2 === true & visited.v3 === true) {
+            if (visited.v1 === true & visited.v2 === true & visited.v3 === true & visited.v4 === true) {
                 quizReady = true;
                 $("#quizStatus").html("Unlocked");
                 $("#quizStatus").css('color', 'green');
@@ -189,16 +189,25 @@ function GotoCarosel(index, prev = -1) {
             break;
         case 3:
             views[0] = "#View2";
+            if (prev !== -1) {
+                views[0] = "#View" + prev;
+            }
             views[1] = "#View3";
             NavLinks[1].classList.remove("active");
             break;
         case 4:
             views[0] = "#View2";
+            if (prev !== -1) {
+                views[0] = "#View" + prev;
+            }
             views[1] = "#View4";
             NavLinks[1].classList.remove("active");
             break;
         case 5:
             views[0] = "#View2";
+            if (prev !== -1) {
+                views[0] = "#View" + prev;
+            }
             views[1] = "#View5";
             NavLinks[1].classList.remove("active");
             break;
@@ -208,6 +217,14 @@ function GotoCarosel(index, prev = -1) {
             }
             views[0] = "#View2";
             views[1] = "#View7";
+            NavLinks[1].classList.remove("active");
+            break;
+        case 8:
+            views[0] = "#View2";
+            if (prev !== -1) {
+                views[0] = "#View" + prev;
+            }
+            views[1] = "#View8";
             NavLinks[1].classList.remove("active");
             break;
         default:
@@ -231,15 +248,10 @@ function GotoCarosel(index, prev = -1) {
         initComparisons();
         visited.v3 = true;
     }
-}
-
-function pulse() {
-    if (phase === 0) {
-        $(".iconLabel").fadeOut(750);
-        phase = 1;
-    } else {
-        $(".iconLabel").fadeIn(750);
-        phase = 0;
+    if (index === 8 & visited.v4 === false) {
+        $("#comp4").addClass("active1");
+        initComparisons();
+        visited.v4 = true;
     }
 }
 
@@ -247,13 +259,11 @@ function main() {
     console.log("script loaded.");
     NavLinks = $(".nav-item");
     $('form').submit(false);
-    //initComparisons();
-    /*$('#carouselPrimary').carousel({
+    $('#carouselExampleIndicators').carousel({
         interval: false,
         keyboard: false
     });
-    $('#carouselPrimary').on('slid.bs.carousel', CarouselCallback);
-    setInterval(function () { pulse(); }, 1500);*/
+    $('#carouselExampleIndicators').on('slid.bs.carousel', CarouselCallback);
 }
 
 document.addEventListener("DOMContentLoaded", function (ev) { main(); });
